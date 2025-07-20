@@ -1,0 +1,103 @@
+/** Animated gradient background */
+body {
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(-45deg, #e3ffe8, #f9f9f9, #e0c3fc, #8ec5fc);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.card {
+  border-radius: 1.2rem !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  border: none !important;
+  backdrop-filter: blur(2px);
+}
+
+.btn-primary, .btn-success, .btn-danger {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 0.7rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-danger:hover {
+  filter: brightness(1.1);
+}
+
+input, textarea {
+  border-radius: 0.5rem !important;
+  font-size: 1rem;
+}
+
+.list-group-item {
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: #f8f9fa;
+  transition: box-shadow 0.2s;
+}
+
+.list-group-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.display-5 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  letter-spacing: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e0c3fc;
+}
+::-webkit-scrollbar-thumb {
+  background: #8ec5fc;
+  border-radius: 4px;
+}
+
+.animated-gradient-text {
+  background: linear-gradient(90deg, #4e54c8, #8ec5fc, #e0c3fc, #43e97b);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 3s ease-in-out infinite alternate;
+}
+@keyframes gradientText {
+  0% {background-position: 0% 50%;}
+  100% {background-position: 100% 50%;}
+}
+.brand-gradient {
+  background: linear-gradient(90deg, #4e54c8, #43e97b);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 3s ease-in-out infinite alternate;
+}
+
+.bounce-effect {
+  animation: bounce 1.2s infinite alternate;
+}
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-12px); }
+}
+
+.cool-section-title {
+  font-weight: 700;
+  font-size: 1.7rem;
+  background: linear-gradient(90deg, #4e54c8, #43e97b, #8ec5fc);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 8px rgba(78,84,200,0.08);
+  margin-bottom: 1rem;
+}
